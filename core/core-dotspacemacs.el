@@ -353,9 +353,12 @@ This variable can also be set to a property list for finer control:
   :size-limit-kb 1000)
 The property `:enabled-for-modes' takes priority over `:disabled-for-modes' and
 restricts line-number to the specified list of major-mode.")
+<<<<<<< HEAD
 
 (defvar dotspacemacs-enable-server nil
   "If non-nil, start an Emacs server if one is not already running.")
+=======
+>>>>>>> 141243375... line numbers: finer configuration of line numbers activation
 
 (defvar dotspacemacs-persistent-server nil
   "If non nil advises quit functions to keep server open when quitting.")

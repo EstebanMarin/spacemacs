@@ -381,8 +381,14 @@
     :commands (linum-relative-toggle linum-relative-on)
     :init
     (progn
+<<<<<<< HEAD
       (when (or (spacemacs/visual-line-numbers-p)
                 (spacemacs/relative-line-numbers-p))
+=======
+      (when (or (eq dotspacemacs-line-numbers 'relative)
+                (car (spacemacs/mplist-get dotspacemacs-line-numbers
+                                           :relative)))
+>>>>>>> 141243375... line numbers: finer configuration of line numbers activation
         (add-hook 'spacemacs-post-user-config-hook 'linum-relative-on))
       (spacemacs/set-leader-keys "tr" 'spacemacs/linum-relative-toggle))
     :config

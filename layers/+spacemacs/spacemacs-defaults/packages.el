@@ -202,6 +202,7 @@
     :defer t
     :init (spacemacs/set-leader-keys "ji" 'imenu)))
 
+<<<<<<< HEAD:layers/+spacemacs/spacemacs-defaults/packages.el
 (defun spacemacs-defaults/init-display-line-numbers ()
   (use-package display-line-numbers
     :defer t
@@ -290,6 +291,32 @@
         (global-linum-mode)))))
 
 (defun spacemacs-defaults/init-occur-mode ()
+=======
+(defun spacemacs-base/init-linum ()
+  (use-package linum
+    :config
+    (progn
+      (if (or (eq dotspacemacs-line-numbers t)
+              (eq dotspacemacs-line-numbers 'relative))
+          (progn
+            (add-hook 'prog-mode-hook 'linum-mode)
+            (add-hook 'text-mode-hook 'linum-mode)))
+      (defun linum-on ()
+        "Overwrite the original `linum-on' function with a more selective one."
+        (when (spacemacs/enable-line-numbers-p)
+          (linum-mode)))
+      (when dotspacemacs-line-numbers
+        (global-linum-mode))))
+  (setq linum-format "%4d")
+  (spacemacs|add-toggle line-numbers
+    :mode linum-mode
+    :documentation "Show the line numbers."
+    :evil-leader "tn")
+  (advice-add #'linum-update-window
+              :after #'spacemacs/linum-update-window-scale-fix))
+
+(defun spacemacs-base/init-occur-mode ()
+>>>>>>> 141243375... line numbers: finer configuration of line numbers activation:layers/+distributions/spacemacs-base/packages.el
   (evilified-state-evilify-map occur-mode-map
     :mode occur-mode))
 

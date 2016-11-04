@@ -1369,6 +1369,43 @@ Enable *line numbers* everywhere, even in non-prog-mode and non-text-mode buffer
   (setq-default dotspacemacs-line-numbers '(:enabled-for-modes 'all))
 #+END_SRC
 
+=dotspacemacs-line-numbers= can also be set to a property list for finer control
+over line numbers activation.
+
+Available properties:
+
+| Property              | Description                                                                                  |
+|-----------------------+----------------------------------------------------------------------------------------------|
+| =:disabled-for-modes= | list of major modes where line numbering is inhibited                                        |
+| =:enabled-for-modes=  | disable for all major modes except those listed. Takes precedence over =:disabled-for-modes= |
+| =:relative=           | if non-nil, line numbers are relative to the position of the cursor                          |
+| =:size-limit-kb=      | size limit in kilobytes after which line numbers are not activated                           |
+
+Example:
+
+Disable line numbers in dired-mode, doc-view-mode, markdown-mode, org-mode,
+pdf-view-mode, text-mode as well as buffers over 1Mb:
+
+#+BEGIN_SRC emacs-lisp
+(setq-default dotspacemacs-lines-numbers '(:relative nil
+                                           :disabled-for-modes dired-mode
+                                                               doc-view-mode
+                                                               markdown-mode
+                                                               org-mode
+                                                               pdf-view-mode
+                                                               text-mode
+                                           :size-limit-kb 1000))
+#+END_SRC
+
+Relative line numbers only in c-mode and c++ mode with a size limit of =dotspacemacs-large-file-size=:
+
+#+BEGIN_SRC emacs-lisp
+(setq-default dotspacemacs-lines-numbers '(:relative t
+                                           :enabled-for-modes c-mode
+                                                              c++-mode
+                                           :size-limit-kb (* dotspacemacs-large-file-size 1000))
+#+END_SRC
+
 ** Mode-line
 *** Mode-line themes
 Spacemacs supports different mode-line themes. The mode-line theme is set in the

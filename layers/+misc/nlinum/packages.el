@@ -13,6 +13,7 @@
 ;;
 ;;; License: GPLv3
 
+<<<<<<< HEAD
 (if (version< emacs-version "26")
     (progn
       (defconst nlinum-packages
@@ -59,3 +60,43 @@
   (when (configuration-layer/layer-usedp 'nlinum)
     (spacemacs-buffer/warning (concat "nlinum layer is deprecated for Emacs 26.1 and above."
                                       " You can safely remove it from your dotfile."))))
+=======
+(defconst nlinum-packages
+  '(
+    (linum :excluded t)
+    (linum-relative :excluded t)
+    nlinum
+    nlinum-relative
+    ))
+
+(defun nlinum/init-nlinum ()
+  (use-package nlinum
+    :init
+    (spacemacs|add-toggle line-numbers
+      :mode nlinum-mode
+      :documentation "Show the line numbers."
+      :evil-leader "tn")
+    :config
+    (progn
+      (if (or (eq dotspacemacs-line-numbers t)
+              (eq dotspacemacs-line-numbers 'relative))
+          (progn
+            (add-hook 'prog-mode-hook 'nlinum-mode)
+            (add-hook 'text-mode-hook 'nlinum-mode))
+        (add-hook 'after-change-major-mode-hook 'spacemacs/nlinum-maybe-on))
+      (setq nlinum-format "%4d"))))
+
+(defun nlinum/init-nlinum-relative ()
+  (use-package nlinum-relative
+    :commands (nlinum-relative-toggle nlinum-relative-on)
+    :init
+    (progn
+      (setq nlinum-relative-current-symbol ""
+            nlinum-relative-redisplay-delay 0)
+      (when (or (car (spacemacs/mplist-get dotspacemacs-line-numbers
+                                           :relative))
+                (eq dotspacemacs-line-numbers 'relative))
+        (nlinum-relative-setup-evil)
+        (add-hook 'nlinum-mode-hook 'nlinum-relative-on))
+      (spacemacs/set-leader-keys "tr" 'nlinum-relative-toggle))))
+>>>>>>> 141243375... line numbers: finer configuration of line numbers activation
