@@ -14,7 +14,12 @@
 ;;
 ;;; License: GPLv3
 
+<<<<<<< HEAD
 (setq autohotkey-packages '(ahk-mode))
+=======
+(setq autohotkey-packages
+  '(ahk-mode))
+>>>>>>> 959a173a9... Remove trailing whitespace from all files
 
 (defun autohotkey/init-ahk-mode ()
   (use-package ahk-mode

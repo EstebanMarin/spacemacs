@@ -2617,7 +2617,10 @@ Improve loading robustness:
   (ivy completion engine will be available in 0.106) (thanks to StreakyCobra)
 - Add link to =BountySource= page to =README.md= (thanks to houli)
 - Move =request= storage folder to =.cache= directory
+<<<<<<< HEAD
 
+=======
+>>>>>>> 959a173a9... Remove trailing whitespace from all files
 *** Layer changes
 **** Markdown
 - Add support for javascript code blocks syntax highlighting
@@ -2678,10 +2681,15 @@ Improve loading robustness:
 *** Fixes
 **** Core
 - Fix home buffer obfuscating opened file when Emacs starts (thanks to justbur)
+<<<<<<< HEAD
 
 **** Ruby layer
 - Fix =rbenv= loading (thanks to TheBB)
 
+=======
+**** Ruby layer
+- Fix =rbenv= loading (thanks to TheBB)
+>>>>>>> 959a173a9... Remove trailing whitespace from all files
 **** Spacemacs layouts
 - Fix jumping to last layout when the last layout is the default layout
   (thanks to TheBB)
@@ -4155,7 +4163,10 @@ Improve loading robustness:
 - Fix ~F~ in Vim style in =Magit= status buffer, now ~F~ is correctly
   bound to =pull= popup menu
 - Fix intermittent erroneous ~k~ key binding in =Magit= status buffer.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 959a173a9... Remove trailing whitespace from all files
 *** Core
 - Fix mandatory dependency on =evil-escape=
 - Fix evilification of =evil-escape= starter key
@@ -4351,7 +4362,10 @@ Improve loading robustness:
 
 **** Ocaml
 - Don't auto-close backticks (thanks to edwintorok)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 959a173a9... Remove trailing whitespace from all files
 **** Org
 - Fontify code blocks (thanks to tuhdo)
 - Add =toc-org= package (thanks to CestDiego)
@@ -5035,7 +5049,10 @@ a batch of packages.
 - Move ~SPC m t~ to ~SPC m h t~ according to Spacemacs conventions (thanks
   to jeremyjh)
 - Add C-- =cmm-mode= (thanks to bgamari)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 959a173a9... Remove trailing whitespace from all files
 *** Helm
 - Add =helm-colors= key binding on ~SPC C l~ (thanks to tuhdo)
 - Make =helm-ff-doted-directory= consistent (thanks to tuhdo)

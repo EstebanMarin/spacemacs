@@ -235,7 +235,11 @@
                 (setq module (concat module " " (car iter)))
                 (setq iter (cdr iter)))
 
+<<<<<<< HEAD
               (cl-incf index)
+=======
+              (incf index)
+>>>>>>> 959a173a9... Remove trailing whitespace from all files
               (insert (format " %03d) %-25s %-30s %10s"
                   index
                   (pylookup-trim api 25)

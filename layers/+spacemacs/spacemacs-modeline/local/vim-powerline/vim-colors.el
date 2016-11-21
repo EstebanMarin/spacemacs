@@ -82,8 +82,12 @@
             (motion       ,brightpurple    ,mediumpurple t)
             (emacs        ,darkestcyan     ,white        t)
             (iedit        ,darkred         ,brightestred t)
+<<<<<<< HEAD:layers/+spacemacs/spacemacs-modeline/local/vim-powerline/vim-colors.el
             (lisp         ,brightpurple    ,mediumpurple t)
             (hybrid       ,darkestblue     ,mediumcyan   t))
+=======
+            (lisp         ,brightpurple    ,mediumpurple t))
+>>>>>>> 959a173a9... Remove trailing whitespace from all files:layers/+vim/vim-powerline/local/vim-powerline/vim-colors.el
 
            (("branch" "scrollpercent" "raw" "filesize")
             (normal      ,gray9           ,gray4)
