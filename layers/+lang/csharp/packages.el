@@ -25,7 +25,19 @@
   (use-package omnisharp
     :defer t
     :init
+<<<<<<< HEAD
     (spacemacs//csharp-setup-backend)
+=======
+    (progn
+      (when (configuration-layer/package-usedp 'company)
+        ;; needed to avoid an error when fetching doc using company
+        ;; Note: if you are using a roslyn based omnisharp server you can
+        ;; set back this variable to t.
+        (setq omnisharp-auto-complete-want-documentation nil))
+      (push 'company-omnisharp company-backends-csharp-mode)
+      (add-to-list 'spacemacs-jump-handlers-csharp-mode
+                   '(omnisharp-go-to-definition :async t)))
+>>>>>>> eac9b41bb... Fix issue with jump handler in omnisharp-mode where the handler is async
     :config
     (spacemacs//csharp-configure)
     ))
