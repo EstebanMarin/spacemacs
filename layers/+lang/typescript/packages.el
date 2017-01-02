@@ -59,11 +59,16 @@
              (message
               "Invalid typescript-layer configuration, no such linter: %s" typescript-linter))))))
 
+<<<<<<< HEAD
 (defun typescript/set-lsp-linter ()
   (with-eval-after-load 'lsp-ui
     (with-eval-after-load 'flycheck
       (flycheck-add-mode 'javascript-eslint 'typescript-tsx-mode)
       (flycheck-add-mode 'javascript-eslint 'typescript-mode))))
+=======
+(defun typescript/post-init-eldoc ()
+  (add-hook 'typescript-mode-hook 'eldoc-mode))
+>>>>>>> 981d74672... Fix eldoc initialization in typescript layer.
 
 (defun typescript/post-init-flycheck ()
   (spacemacs/enable-flycheck 'typescript-mode)
