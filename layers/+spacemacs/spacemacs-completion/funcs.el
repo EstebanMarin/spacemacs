@@ -41,7 +41,11 @@
         (props (cddr args)))
     ;; fuzzy matching is not supported in async sources
     (unless (child-of-class-p source-type helm-source-async)
+<<<<<<< HEAD
       (plist-put props :fuzzy-match (eq 'always helm-use-fuzzy))))
+=======
+      (plist-put props :fuzzy-match (eq 'always dotspacemacs-helm-use-fuzzy))))
+>>>>>>> 9d180c72d... More robust fix for error ‘fuzzy-match’ not supported in async sources
   (apply f args))
 
 (defun spacemacs//helm-find-files-enable-helm--in-fuzzy ()
