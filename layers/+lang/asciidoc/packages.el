@@ -1,6 +1,10 @@
 ;;; packages.el --- Asciidoc Layer packages File for Spacemacs
 ;;
+<<<<<<< HEAD
 ;; Copyright (c) 2012-2018 Sylvain Benner & Contributors
+=======
+;; Copyright (c) 2012-2017 Sylvain Benner & Contributors
+>>>>>>> b252d252b... Bump year in copyright headers
 ;;
 ;; Author: Mark Safronov <hijarian@gmail.com>
 ;; Author: Torben Hoffmann <torben.lehoff@gmail.com>

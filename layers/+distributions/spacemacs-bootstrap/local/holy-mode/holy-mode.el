@@ -1,6 +1,10 @@
 ;;; holy-mode.el --- Enter the church of Emacs
 
+<<<<<<< HEAD:layers/+distributions/spacemacs-bootstrap/local/holy-mode/holy-mode.el
 ;; Copyright (c) 2015-2018 Sylvain Benner
+=======
+;; Copyright (c) 2015-2017 Sylvain Benner
+>>>>>>> b252d252b... Bump year in copyright headers:layers/+distributions/spacemacs-base/local/holy-mode/holy-mode.el
 ;;
 ;; Author: Sylvain Benner <sylvain.benner@gmail.com>
 ;; Keywords: convenience editing

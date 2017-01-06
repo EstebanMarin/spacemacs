@@ -1,6 +1,10 @@
 # global_conf.py --- ycmd global configuration file for Spacemacs
 #
+<<<<<<< HEAD:layers/+lang/c-c++/global_conf.py
 # Copyright (c) 2012-2018 Sylvain Benner & Contributors
+=======
+# Copyright (c) 2012-2017 Sylvain Benner & Contributors
+>>>>>>> b252d252b... Bump year in copyright headers:layers/+tools/ycmd/global_conf.py
 #
 # Author: Thomas de Beauchene <thomas.de.beauchene@gmail.com>
 # URL: https://github.com/syl20bnr/spacemacs

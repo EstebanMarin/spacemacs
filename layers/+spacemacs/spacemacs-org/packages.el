@@ -1,6 +1,10 @@
 ;;; packages.el --- spacemacs-org layer packages file for Spacemacs.
 ;;
+<<<<<<< HEAD
 ;; Copyright (c) 2012-2018 Sylvain Benner & Contributors
+=======
+;; Copyright (c) 2012-2017 Sylvain Benner & Contributors
+>>>>>>> b252d252b... Bump year in copyright headers
 ;;
 ;; Author: Boris Buliga <d12frosted@d12frosted.local>
 ;; URL: https://github.com/syl20bnr/spacemacs

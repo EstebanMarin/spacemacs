@@ -179,6 +179,7 @@ variable =dotspacemacs-additional-packages=.
 The file header for =elisp= files should look like the following template:
 
 #+BEGIN_EXAMPLE
+<<<<<<< HEAD
   ;;; FILENAME --- NAME Layer packages File for Spacemacs
   ;;
   ;; Copyright (c) 2012-2018 Sylvain Benner & Contributors
@@ -189,6 +190,18 @@ The file header for =elisp= files should look like the following template:
   ;; This file is not part of GNU Emacs.
   ;;
   ;;; License: GPLv3
+=======
+    ;;; FILENAME --- NAME Layer packages File for Spacemacs
+    ;;
+    ;; Copyright (c) 2012-2017 Sylvain Benner & Contributors
+    ;;
+    ;; Author: YOUR_NAME <YOUR_EMAIL>
+    ;; URL: https://github.com/syl20bnr/spacemacs
+    ;;
+    ;; This file is not part of GNU Emacs.
+    ;;
+    ;;; License: GPLv3
+>>>>>>> b252d252b... Bump year in copyright headers
 #+END_EXAMPLE
 
 You should replace =FILENAME= by the name of the file (e.g. =packages.el=)

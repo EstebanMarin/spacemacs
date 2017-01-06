@@ -1,6 +1,10 @@
 ;;; packages.el --- PDF Layer packages File for Spacemacs
 ;;
+<<<<<<< HEAD:layers/+readers/pdf/packages.el
 ;; Copyright (c) 2012-2018 Sylvain Benner
+=======
+;; Copyright (c) 2012-2017 Sylvain Benner
+>>>>>>> b252d252b... Bump year in copyright headers:layers/+tools/pdf-tools/packages.el
 ;; Copyright (c) 2014-2016 Sylvain Benner & Contributors
 ;;
 ;; Author: André Peric Tavares <andre.peric.tavares@gmail.com>
