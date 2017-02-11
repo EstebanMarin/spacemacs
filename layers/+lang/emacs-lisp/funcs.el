@@ -44,9 +44,15 @@ Unlike `eval-defun', this does not go to topmost function."
   (eval-defun 'edebugit))
 
 (defun spacemacs/edebug-instrument-defun-off ()
+<<<<<<< HEAD
   "Toggle off instrumentalisation for the function under `defun'."
   (interactive)
   (eval-defun nil))
+=======
+  "Toggle on instrumentalisation for the function under `defun'."
+  (interactive)
+  (eval-defun))
+>>>>>>> 3b4501fb3... emacs-lisp: add support for debugger and edebug
 
 (defun spacemacs/elisp-toggle-debug-expr-and-eval-func ()
   "Insert or remove debug expression, evaluate function and save buffer."
@@ -62,6 +68,7 @@ Unlike `eval-defun', this does not go to topmost function."
   (eval-defun nil)
   (save-buffer))
 
+<<<<<<< HEAD
 (defun spacemacs//edebug-mode (&rest args)
   "Additional processing when `edebug-mode' is activated or deactivated."
   (let ((evilified (or (eq 'vim dotspacemacs-editing-style)
@@ -76,6 +83,14 @@ Unlike `eval-defun', this does not go to topmost function."
       (when (and (fboundp 'golden-ratio-mode)
                  golden-ratio-mode)
         (golden-ratio)))))
+=======
+(defun spacemacs//edebug-hook ()
+  "Hook for `edebug-mode'."
+  (evil-normalize-keymaps)
+  (when (and (fboundp 'golden-ratio-mode)
+             golden-ratio-mode)
+    (golden-ratio)))
+>>>>>>> 3b4501fb3... emacs-lisp: add support for debugger and edebug
 
 
 ;; smartparens integration

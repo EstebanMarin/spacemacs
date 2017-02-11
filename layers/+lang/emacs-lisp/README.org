@@ -4,6 +4,7 @@
 
 [[file:img/emacs.png]]
 
+<<<<<<< HEAD
 * Table of Contents                     :TOC_5_gh:noexport:
 - [[#description][Description]]
   - [[#features][Features:]]
@@ -19,6 +20,17 @@
   - [[#additional-evaluation-functions][Additional evaluation functions]]
   - [[#format-code][Format code]]
   - [[#debugging][Debugging]]
+=======
+* Table of Contents                                         :TOC_4_gh:noexport:
+ - [[#description][Description]]
+ - [[#install][Install]]
+ - [[#auto-compile][Auto-compile]]
+ - [[#working-with-lisp-files-barfage-slurpage--more][Working with lisp files (barfage, slurpage & more)]]
+ - [[#key-bindings][Key bindings]]
+   - [[#additional-evualation-functions][Additional evualation functions]]
+   - [[#format-code][Format code]]
+   - [[#debugging][Debugging]]
+>>>>>>> 3b4501fb3... emacs-lisp: add support for debugger and edebug
 
 * Description
 This layer gathers all the configuration related to emacs-lisp. This should
@@ -159,6 +171,7 @@ When enabled the symbol =🆂= should be displayed in the mode-line.
 
 * Key bindings
 
+<<<<<<< HEAD
 | Key binding                | Description                                            |
 |----------------------------+--------------------------------------------------------|
 | ~SPC m g g~                | go to definition of symbol under point                 |
@@ -194,6 +207,26 @@ Function related to test are present under the ~SPC m t~ prefix:
 | ~SPC m t h~ | test help     |
 
 ** Additional evaluation functions
+=======
+| Key Binding                | Description                            |
+|----------------------------+----------------------------------------|
+| ~SPC m g g~                | go to definition of symbol under point |
+| ~SPC m h h~                | describe symbol at point               |
+| ~SPC m c c~                | byte compile the current file          |
+| ~SPC m c l~                | popup compile-log buffer               |
+| ~SPC m e $~ or ~SPC m e l~ | go to end of current line and evaluate |
+| ~SPC m e b~                | evaluate current buffer                |
+| ~SPC m e C~                | evaluate current =defun= or =setq=     |
+| ~SPC m e e~                | evaluate sexp before point             |
+| ~SPC m e f~                | evaluation current function            |
+| ~SPC m e r~                | evaluate current region                |
+| ~SPC m ​,​~                  | toggle =lisp state=                    |
+| ~SPC m t b~                | run tests of current buffer            |
+| ~SPC m t q~                | run =ert=                              |
+| ~SPC m d m~                | open [[https://github.com/joddie/macrostep][macrostep]] transient-state         |
+
+** Additional evualation functions
+>>>>>>> 3b4501fb3... emacs-lisp: add support for debugger and edebug
 If =smartparens= is used the following additional key bindings are available:
 
 | Key binding | Description                  |
@@ -202,7 +235,11 @@ If =smartparens= is used the following additional key bindings are available:
 | ~SPC m e s~ | evaluate symbol around point |
 
 ** Format code
+<<<<<<< HEAD
 The [[https://github.com/syl20bnr/spacemacs/blob/develop/layers/%2Bemacs/semantic/README.org][semantic]] layer should be installed for these key bindings to become active.
+=======
+The [[file:../../semantic/README.org][semantic]] layer should be installed for these key bindings to become active.
+>>>>>>> 3b4501fb3... emacs-lisp: add support for debugger and edebug
 
 | Key binding | Description             |
 |-------------+-------------------------|
@@ -212,13 +249,19 @@ The [[https://github.com/syl20bnr/spacemacs/blob/develop/layers/%2Bemacs/semanti
 | ~SPC m = s~ | format current sexp     |
 
 ** Debugging
+<<<<<<< HEAD
 To start debugging:
 
 | Key binding | Description                                                            |
+=======
+
+| Key Binding | Description                                                            |
+>>>>>>> 3b4501fb3... emacs-lisp: add support for debugger and edebug
 |-------------+------------------------------------------------------------------------|
 | ~SPC m d f~ | on a =defun= symbol toggle on the instrumentalisation of the function  |
 | ~SPC m d F~ | on a =defun= symbol toggle off the instrumentalisation of the function |
 | ~SPC m d t~ | insert =(debug)= to print the stack trace and re-evaluate the function |
+<<<<<<< HEAD
 
 In =edebug-mode= (=*Debugging*= is displayed in the minor modes segment of the
 mode line)
@@ -229,3 +272,5 @@ In =debugger-mode= (=Debugger= is displayed in major mode segment of the mode
 line)
 
 TODO
+=======
+>>>>>>> 3b4501fb3... emacs-lisp: add support for debugger and edebug
