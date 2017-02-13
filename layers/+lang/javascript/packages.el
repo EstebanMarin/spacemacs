@@ -226,15 +226,29 @@
           "msR" "nodejs-send-region-and-focus")
         ))))
 
+<<<<<<< HEAD
 (defun javascript/pre-init-org ()
   (spacemacs|use-package-add-hook org
     :post-config (add-to-list 'org-babel-load-languages '(js . t))))
+=======
+(defun javascript/init-tern ()
+  (use-package tern
+    :defer t
+    :init (add-hook 'js2-mode-hook 'tern-mode)
+    :config
+    (progn
+      (spacemacs|hide-lighter tern-mode)
+      (when javascript-disable-tern-port-files
+        (add-to-list 'tern-command "--no-port-file" 'append))
+      (spacemacs//set-tern-key-bindings 'js2-mode))))
+>>>>>>> 32a32f401... Replace use-package :diminish by spacemacs|hide-lighter
 
 (defun javascript/pre-init-prettier-js ()
   (when (eq javascript-fmt-tool 'prettier)
     (add-to-list 'spacemacs--prettier-modes 'js2-mode)))
 
 (defun javascript/init-skewer-mode ()
+<<<<<<< HEAD
   (when (eq javascript-repl 'skewer)
     (use-package skewer-mode
       :defer t
@@ -261,6 +275,33 @@
           "sr" 'spacemacs/skewer-eval-region
           "sR" 'spacemacs/skewer-eval-region-and-focus
           "ss" 'skewer-repl)))))
+=======
+  (use-package skewer-mode
+    :defer t
+    :init
+    (progn
+      (spacemacs/register-repl 'skewer-mode
+                               'spacemacs/skewer-start-repl
+                               "skewer")
+      (add-hook 'js2-mode-hook 'skewer-mode))
+    :config
+    (progn
+      (spacemacs|hide-lighter skewer-mode)
+      (spacemacs/declare-prefix-for-mode 'js2-mode "ms" "skewer")
+      (spacemacs/declare-prefix-for-mode 'js2-mode "me" "eval")
+      (spacemacs/set-leader-keys-for-major-mode 'js2-mode
+        "'" 'spacemacs/skewer-start-repl
+        "ee" 'skewer-eval-last-expression
+        "eE" 'skewer-eval-print-last-expression
+        "sb" 'skewer-load-buffer
+        "sB" 'spacemacs/skewer-load-buffer-and-focus
+        "si" 'spacemacs/skewer-start-repl
+        "sf" 'skewer-eval-defun
+        "sF" 'spacemacs/skewer-eval-defun-and-focus
+        "sr" 'spacemacs/skewer-eval-region
+        "sR" 'spacemacs/skewer-eval-region-and-focus
+        "ss" 'skewer-repl))))
+>>>>>>> 32a32f401... Replace use-package :diminish by spacemacs|hide-lighter
 
 (defun javascript/post-init-tern ()
   (add-to-list 'tern--key-bindings-modes 'js2-mode))

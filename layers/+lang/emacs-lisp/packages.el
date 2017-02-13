@@ -139,7 +139,11 @@
 
 (defun emacs-lisp/init-auto-compile ()
   (use-package auto-compile
+<<<<<<< HEAD
     :defer (spacemacs/defer)
+=======
+    :defer t
+>>>>>>> 32a32f401... Replace use-package :diminish by spacemacs|hide-lighter
     :init
     (progn
       (spacemacs|require 'auto-compile)
@@ -157,7 +161,11 @@
 (defun emacs-lisp/init-elisp-slime-nav ()
   ;; Elisp go-to-definition with M-. and back again with M-,
   (use-package elisp-slime-nav
+<<<<<<< HEAD
     :defer (spacemacs/defer)
+=======
+    :defer t
+>>>>>>> 32a32f401... Replace use-package :diminish by spacemacs|hide-lighter
     :init
     (progn
       (spacemacs|require 'elisp-slime-nav)
@@ -176,7 +184,13 @@
             "hh" 'elisp-slime-nav-describe-elisp-thing-at-point))
         (let ((jumpl (intern (format "spacemacs-jump-handlers-%S" mode))))
           (add-to-list jumpl 'elisp-slime-nav-find-elisp-thing-at-point))))
+<<<<<<< HEAD
     :config (spacemacs|hide-lighter elisp-slime-nav-mode)))
+=======
+    :config (spacemacs|hide-lighter elisp-slime-nav-mode)
+
+    ))
+>>>>>>> 32a32f401... Replace use-package :diminish by spacemacs|hide-lighter
 
 (defun emacs-lisp/init-emacs-lisp ()
   (dolist (mode '(emacs-lisp-mode lisp-interaction-mode))

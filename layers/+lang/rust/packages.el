@@ -113,6 +113,28 @@
     ;; Don't pair lifetime specifiers
     (sp-local-pair 'rust-mode "'" nil :actions nil)))
 
+<<<<<<< HEAD
 (defun rust/init-toml-mode ()
   (use-package toml-mode
     :mode "/\\(Cargo.lock\\|\\.cargo/config\\)\\'"))
+=======
+(defun rust/init-racer ()
+  (when (memq window-system '(mac ns x))
+    (exec-path-from-shell-copy-env "RUST_SRC_PATH"))
+
+  (use-package racer
+    :defer t
+    :init
+    (progn
+      (spacemacs/add-to-hook 'rust-mode-hook '(racer-mode eldoc-mode))
+      (spacemacs/declare-prefix-for-mode 'rust-mode "mg" "goto")
+      (add-to-list 'spacemacs-jump-handlers-rust-mode 'racer-find-definition)
+      (spacemacs/declare-prefix-for-mode 'rust-mode "mh" "help")
+      (spacemacs/set-leader-keys-for-major-mode 'rust-mode
+        "hh" 'spacemacs/racer-describe))
+    :config
+    (progn
+      (spacemacs|hide-lighter racer-mode)
+      (evilified-state-evilify-map racer-help-mode-map
+        :mode racer-help-mode))))
+>>>>>>> 32a32f401... Replace use-package :diminish by spacemacs|hide-lighter
