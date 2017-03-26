@@ -1,5 +1,6 @@
 #+TITLE: Elixir layer
 
+<<<<<<< HEAD
 #+TAGS: general|layer|multi-paradigm|programming
 
 [[file:img/elixir.png]]
@@ -36,6 +37,29 @@
     - [[#debugging][Debugging]]
   - [[#lsp][LSP]]
     - [[#debugging-1][Debugging]]
+=======
+[[file:img/elixir.png]] with [[file:img/alchemist.png]]
+
+* Table of Contents                                         :TOC_4_gh:noexport:
+ - [[#description][Description]]
+ - [[#install][Install]]
+ - [[#configuration][Configuration]]
+   - [[#flycheck][Flycheck]]
+     - [[#credo][Credo]]
+     - [[#dogma][Dogma]]
+     - [[#mix-compile][mix compile]]
+ - [[#key-bindings][Key bindings]]
+   - [[#refcard][Refcard]]
+   - [[#help][Help]]
+   - [[#mix][Mix]]
+   - [[#project][Project]]
+   - [[#evaluation-in-place][Evaluation in place]]
+   - [[#repl-interactions][REPL interactions]]
+   - [[#tests][Tests]]
+   - [[#compile][Compile]]
+   - [[#execute][Execute]]
+   - [[#code-definition-jump][Code Definition Jump]]
+>>>>>>> 33609a815... elixir: reformat documentation and use blocks for code.
 
 * Description
 This layer adds support for [[http://elixir-lang.org/][Elixir]].
@@ -120,8 +144,13 @@ time.
 You need to install [[https://github.com/rrrene/credo][credo]] into your project. For this, add the following snippet
 to dependencies of your project (in file =mix.exs=):
 
+<<<<<<< HEAD
 #+BEGIN_SRC elixir
   {:credo, "~> 0.5", only: [:dev, :test]}
+=======
+#+BEGIN_SRC
+{:credo, "~> 0.5", only: [:dev, :test]}
+>>>>>>> 33609a815... elixir: reformat documentation and use blocks for code.
 #+END_SRC
 
 Then run in your shell:
@@ -150,6 +179,20 @@ Then run in your shell:
 
 #+BEGIN_SRC shell
   $ mix deps.get
+#+END_SRC
+
+*** Dogma
+In order to lint your code, you also need to install [[https://github.com/lpil/dogma][dogma]] into your project.
+For this, add the following snippet to the dependencies in your =mix.exs= file:
+
+#+BEGIN_SRC
+{:dogma, "~> 0.1", only: [:dev]}
+#+END_SRC
+
+Then run in your shell:
+
+#+BEGIN_SRC shell
+$ mix deps.get
 #+END_SRC
 
 *** mix compile
