@@ -330,6 +330,7 @@ THEME."
             (let ((pkg-dir (spacemacs//get-theme-package-directory theme))
                   (pkg-name (spacemacs/get-theme-package-name theme-name)))
               (when pkg-dir
+<<<<<<< HEAD
                 ;; package activate should be enough, but not all themes
                 ;; have add themselves to `custom-theme-load-path' in autoload.
                 ;; (for example, moe-theme).
@@ -377,6 +378,44 @@ THEME."
     (unless (display-graphic-p)
       (eval `(spacemacs|do-after-display-system-init
               (load-theme ',theme-name t))))))
+=======
+                (add-to-list 'custom-theme-load-path pkg-dir))))
+           (t
+            ;; other themes
+            ;; we assume that the package name is suffixed with `-theme'
+            ;; if not we will handle the special themes as we get issues
+            ;; in the tracker.
+            (let ((pkg (spacemacs//get-theme-package theme)))
+              (configuration-layer/load-or-install-package pkg install)))))
+        ;; Apply theme
+        (mapc 'disable-theme custom-enabled-themes)
+        ;; explicitly reload the theme for the first GUI client
+        (if (display-graphic-p)
+            (eval `(spacemacs|do-after-display-system-init
+                    (load-theme ',theme t)))
+          (load-theme theme t))
+        (when install
+          (spacemacs-buffer/replace-last-line
+           (format (concat "--> User theme \"%s\" has been applied, you may "
+                           "have to restart Emacs.\n")
+                   spacemacs--default-user-theme))
+          (redisplay)))
+    ('error
+     (if install
+         (progn
+           (spacemacs-buffer/warning
+            (concat "An error occurred while applying "
+                    "the theme \"%s\", fallback on theme \"%s\". \n"
+                    "Error was: %s") theme spacemacs--fallback-theme err)
+           (spacemacs-buffer/warning
+            (concat "Please check the value of \"dotspacemacs-themes\" in your "
+                    "dotfile or open an issue \n"
+                    "so we can add support for the theme \"%s\".") theme)
+           (unless (display-graphic-p)
+             (eval `(spacemacs|do-after-display-system-init
+                     (load-theme ',spacemacs--fallback-theme t)))))
+       (throw 'error)))))
+>>>>>>> 408817a78... Fix the issue of terminal failed to load theme.
 
 (defun spacemacs/cycle-spacemacs-theme (&optional backward)
   "Cycle through themes defined in `dotspacemacs-themes'.
