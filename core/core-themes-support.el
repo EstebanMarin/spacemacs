@@ -390,9 +390,9 @@ THEME."
         ;; Apply theme
         (mapc 'disable-theme custom-enabled-themes)
         ;; explicitly reload the theme for the first GUI client
-        (if (display-graphic-p)
-            (eval `(spacemacs|do-after-display-system-init
-                    (load-theme ',theme t)))
+        (eval `(spacemacs|do-after-display-system-init
+                (load-theme ',theme t)))
+        (unless (display-graphic-p)
           (load-theme theme t))
         (when install
           (spacemacs-buffer/replace-last-line
