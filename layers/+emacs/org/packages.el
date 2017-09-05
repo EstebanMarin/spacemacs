@@ -14,6 +14,7 @@
 ;;; License: GPLv3
 
 (setq org-packages
+<<<<<<< HEAD
       '(
         company
         company-emoji
@@ -50,6 +51,33 @@
         (org-trello :toggle org-enable-trello-support)
         (org-sticky-header :toggle org-enable-sticky-header)
         ))
+=======
+  '(
+    company
+    company-emoji
+    emoji-cheat-sheet-plus
+    (evil-org :location local)
+    evil-surround
+    gnuplot
+    htmlize
+    mu4e
+    ;; ob, org and org-agenda are installed by `org-plus-contrib'
+    (ob :location built-in)
+    (org :location built-in)
+    (org-agenda :location built-in)
+    org-download
+    org-mime
+    org-pomodoro
+    org-present
+    (org-projectile :toggle (configuration-layer/package-usedp 'projectile))
+    (ox-twbs :toggle org-enable-bootstrap-support)
+    ;; use a for of ox-gfm to fix index generation
+    (ox-gfm :location (recipe :fetcher github :repo "syl20bnr/ox-gfm")
+            :toggle org-enable-github-support)
+    (ox-reveal :toggle org-enable-reveal-js-support)
+    persp-mode
+    ))
+>>>>>>> 3ea3927dc... use org-mime provided by melpa
 
 (defun org/post-init-company ()
   (spacemacs|add-company-backends :backends company-capf :modes org-mode))
