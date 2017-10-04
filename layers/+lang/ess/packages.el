@@ -14,12 +14,21 @@
 ;;; License: GPLv3
 
 (setq ess-packages
+<<<<<<< HEAD
       '(
         ess
         ess-R-data-view
         golden-ratio
         org
         ))
+=======
+  '(
+    ess
+    ess-R-data-view
+    ess-smart-equals
+    golden-ratio
+    org))
+>>>>>>> 185d4d1dd... Remove ess-R-object-popup from ess layer.
 
 (defun ess/init-ess ()
   (use-package ess-site
