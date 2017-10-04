@@ -84,6 +84,7 @@
            ;; add support for evil states
            (evil-set-initial-state 'ess-help-mode 'motion)
 
+<<<<<<< HEAD
            (define-key ess-doc-map "h" 'ess-display-help-on-object)
            (define-key ess-doc-map "p" 'ess-R-dv-pprint)
            (define-key ess-doc-map "t" 'ess-R-dv-ctable)
@@ -144,11 +145,45 @@
            (define-key ess-mode-map (kbd "<s-return>") 'ess-eval-line)
            (define-key inferior-ess-mode-map (kbd "C-j") 'comint-next-input)
            (define-key inferior-ess-mode-map (kbd "C-k") 'comint-previous-input)
+=======
+    (spacemacs/set-leader-keys-for-major-mode 'ess-julia-mode
+      "'"  'julia
+      "si" 'julia)
+    (spacemacs/set-leader-keys-for-major-mode 'ess-mode
+      "'"  'spacemacs/ess-start-repl
+      "si" 'spacemacs/ess-start-repl
+      ;; noweb
+      "cC" 'ess-eval-chunk-and-go
+      "cc" 'ess-eval-chunk
+      "cd" 'ess-eval-chunk-and-step
+      "cm" 'ess-noweb-mark-chunk
+      "cN" 'ess-noweb-previous-chunk
+      "cn" 'ess-noweb-next-chunk
+      ;; REPL
+      "sB" 'ess-eval-buffer-and-go
+      "sb" 'ess-eval-buffer
+      "sD" 'ess-eval-function-or-paragraph-and-step
+      "sd" 'ess-eval-region-or-line-and-step
+      "sL" 'ess-eval-line-and-go
+      "sl" 'ess-eval-line
+      "sR" 'ess-eval-region-and-go
+      "sr" 'ess-eval-region
+      "sT" 'ess-eval-function-and-go
+      "st" 'ess-eval-function
+      ;; R helpers
+      "hd" 'ess-R-dv-pprint
+      "ht" 'ess-R-dv-ctable
+      )
+    (define-key ess-mode-map (kbd "<s-return>") 'ess-eval-line)
+    (define-key inferior-ess-mode-map (kbd "C-j") 'comint-next-input)
+    (define-key inferior-ess-mode-map (kbd "C-k") 'comint-previous-input)))
+>>>>>>> 51de051d4... Remove ess-R-object-popup from ess layer.
 
            (when ess-assign-key
              (define-key ess-r-mode-map          ess-assign-key #'ess-insert-assign)
              (define-key inferior-ess-r-mode-map ess-assign-key #'ess-insert-assign))))
 
+<<<<<<< HEAD
   (eval-after-load "ess-r-mode" spacemacs/ess-config)
   (eval-after-load "ess-julia" spacemacs/ess-config)
 
@@ -159,6 +194,16 @@
   (evilified-state-evilify-map ess-help-mode-map))
 
 (defun ess/init-ess-R-data-view ())
+=======
+(defun ess/init-ess-smart-equals ()
+  (use-package ess-smart-equals
+    :defer t
+    :if ess-enable-smart-equals
+    :init
+    (progn
+      (add-hook 'ess-mode-hook 'ess-smart-equals-mode)
+      (add-hook 'inferior-ess-mode-hook 'ess-smart-equals-mode))))
+>>>>>>> 51de051d4... Remove ess-R-object-popup from ess layer.
 
 (defun ess/pre-init-golden-ratio ()
   (spacemacs|use-package-add-hook golden-ratio
