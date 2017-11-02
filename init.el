@@ -16,6 +16,7 @@
 ;; Without this comment emacs25 adds (package-initialize) here
 ;; (package-initialize)
 
+<<<<<<< HEAD
 ;; Avoid garbage collection during startup.
 ;; see `SPC h . dotspacemacs-gc-cons' for more info
 (defconst emacs-start-time (current-time))
@@ -28,6 +29,14 @@
       nil (not init-file-debug))
 (load (concat spacemacs-core-directory "core-dumper.el")
       nil (not init-file-debug))
+=======
+;; Increase gc-cons-threshold, depending on your system you may set it back to a
+;; lower value in your dotfile (function `dotspacemacs/user-config')
+(setq gc-cons-threshold 100000000)
+
+(defconst spacemacs-version         "0.200.10" "Spacemacs version.")
+(defconst spacemacs-emacs-min-version   "24.4" "Minimal version of Emacs.")
+>>>>>>> 4bb4cb469... Bump version to 0.200.10 and update Change Log
 
 (if (not (version<= spacemacs-emacs-min-version emacs-version))
     (error (concat "Your version of Emacs (%s) is too old. "

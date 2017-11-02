@@ -655,7 +655,10 @@
 - Fix error: (void-variable helm-bookmark-map) when selecting a candidate from
   a Helm buffer (thanks to bmag)
 - Fix window number assignation for Neotree buffer window (thanks to duianto)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4bb4cb469... Bump version to 0.200.10 and update Change Log
 ** 0.200.9 (2017/04/06)
 *** Fixes
 - Fix theme loading with terminal Emacs (thanks to wang0z)

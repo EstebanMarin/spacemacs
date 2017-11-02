@@ -17,7 +17,11 @@
 ;;
 ;;; Code:
 
+<<<<<<< HEAD
 (defconst spacemacs-buffer-version-info "0.300"
+=======
+(defconst spacemacs-buffer-version-info "0.200.10"
+>>>>>>> 4bb4cb469... Bump version to 0.200.10 and update Change Log
   "Current version used to display addition release information.")
 
 (defconst spacemacs-buffer-name "*spacemacs*"
