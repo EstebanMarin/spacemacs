@@ -129,10 +129,13 @@
       (spacemacs/set-leader-keys-for-major-mode 'cython-mode
         "hh" 'anaconda-mode-show-doc
         "gu" 'anaconda-mode-find-references))))
+<<<<<<< HEAD
 
 (defun python/pre-init-dap-mode ()
   (add-to-list 'spacemacs--dap-supported-modes 'python-mode)
   (add-hook 'python-mode-local-vars-hook #'spacemacs//python-setup-dap))
+=======
+>>>>>>> e6e73cb88... python: update invalid cython mode keybindings
 
 (defun python/post-init-eldoc ()
   (add-hook 'python-mode-local-vars-hook #'spacemacs//python-setup-eldoc))
