@@ -66,6 +66,7 @@
         "ga" 'anaconda-mode-find-assignments
         "gb" 'xref-pop-marker-stack
         "gu" 'anaconda-mode-find-references)
+<<<<<<< HEAD
       ;; new anaconda-mode (2018-06-03) removed `anaconda-view-mode-map' in
       ;; favor of xref. Eventually we need to remove this part.
       (when (boundp 'anaconda-view-mode-map)
@@ -76,6 +77,12 @@
           (kbd "C-j") 'next-error-no-select
           (kbd "C-k") 'previous-error-no-select
           (kbd "RET") 'spacemacs/anaconda-view-forward-and-push))
+=======
+
+      (evilified-state-evilify anaconda-view-mode anaconda-view-mode-map
+        (kbd "q") 'quit-window)
+
+>>>>>>> 024a59dd4... python: update anaconda-mode view mode variable names
       (spacemacs|hide-lighter anaconda-mode)
       (defadvice anaconda-mode-goto (before python/anaconda-mode-goto activate)
         (evil--jumps-push))
