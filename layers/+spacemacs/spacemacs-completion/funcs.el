@@ -119,8 +119,23 @@ When searching in the helm-find-files (`SPC f f') actions (`C-z')."
 
 ;; Helm Window position
 
+<<<<<<< HEAD
 (defun spacemacs//display-helm-window (buffer &optional resume)
   "Display the Helm window respecting `helm-position'."
+=======
+(defvar spacemacs-helm-display-help-buffer-regexp '("*.*Helm.*Help.**"))
+(defvar spacemacs-helm-display-buffer-regexp
+  `("*.*helm.**"
+    (display-buffer-in-side-window)
+    (inhibit-same-window . t)
+    (side . ,dotspacemacs-helm-position)
+    (window-width . 0.6)
+    (window-height . 0.4)))
+(defvar spacemacs-display-buffer-alist nil)
+
+(defun spacemacs//display-helm-window (buffer &optional resume)
+  "Display the Helm window respecting `dotspacemacs-helm-position'."
+>>>>>>> 08df5f97f... spacemacs-completion: comply w/ new helm-display-buffer signature
   (let ((display-buffer-alist
          (list spacemacs-helm-display-help-buffer-regexp
                ;; this or any specialized case of Helm buffer must be
