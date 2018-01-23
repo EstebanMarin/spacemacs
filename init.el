@@ -34,7 +34,7 @@
 ;; lower value in your dotfile (function `dotspacemacs/user-config')
 (setq gc-cons-threshold 100000000)
 
-(defconst spacemacs-version         "0.200.10" "Spacemacs version.")
+(defconst spacemacs-version         "0.200.11" "Spacemacs version.")
 (defconst spacemacs-emacs-min-version   "24.4" "Minimal version of Emacs.")
 >>>>>>> 4bb4cb469... Bump version to 0.200.10 and update Change Log
 
