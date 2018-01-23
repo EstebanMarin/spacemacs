@@ -33,7 +33,7 @@
 
 (defconst spacemacs-theme-name-to-package
   '(
-    (alect-black-alt                  . alect-themes)
+   (alect-black-alt                  . alect-themes)
     (alect-black                      . alect-themes)
     (alect-dark-alt                   . alect-themes)
     (alect-dark                       . alect-themes)
@@ -81,7 +81,10 @@
     (base16-black-metal-venom         . base16-theme)
     (base16-brewer                    . base16-theme)
     (base16-bright                    . base16-theme)
+<<<<<<< HEAD
     (base16-brogrammer                . base16-theme)
+=======
+>>>>>>> ec2c5e5c6... Backport up to date lists of themes
     (base16-brushtrees                . base16-theme)
     (base16-brushtrees-dark           . base16-theme)
     (base16-chalk                     . base16-theme)
@@ -114,6 +117,7 @@
     (base16-gruvbox-light-soft        . base16-theme)
     (base16-harmonic-dark             . base16-theme)
     (base16-harmonic-light            . base16-theme)
+<<<<<<< HEAD
     (base16-heetch                    . base16-theme)
     (base16-heetch-light              . base16-theme)
     (base16-helios                    . base16-theme)
@@ -122,6 +126,9 @@
     (base16-ia-dark                   . base16-theme)
     (base16-ia-light                  . base16-theme)
     (base16-icy                       . base16-theme)
+=======
+    (base16-hopscotch                 . base16-theme)
+>>>>>>> ec2c5e5c6... Backport up to date lists of themes
     (base16-irblack                   . base16-theme)
     (base16-isotope                   . base16-theme)
     (base16-macintosh                 . base16-theme)
@@ -140,10 +147,13 @@
     (base16-oceanicnext               . base16-theme)
     (base16-one-light                 . base16-theme)
     (base16-onedark                   . base16-theme)
+<<<<<<< HEAD
     (base16-outrun-dark               . base16-theme)
     (base16-papercolor-dark           . base16-theme)
     (base16-papercolor-light          . base16-theme)
     (base16-paraiso                   . base16-theme)
+=======
+>>>>>>> ec2c5e5c6... Backport up to date lists of themes
     (base16-one-light                 . base16-theme)
     (base16-paraiso                   . base16-theme)
     (base16-phd                       . base16-theme)
@@ -154,7 +164,10 @@
     (base16-rebecca                   . base16-theme)
     (base16-seti                      . base16-theme)
     (base16-shapeshifter              . base16-theme)
+<<<<<<< HEAD
     (base16-snazzy                    . base16-theme)
+=======
+>>>>>>> ec2c5e5c6... Backport up to date lists of themes
     (base16-solarflare                . base16-theme)
     (base16-solarized-dark            . base16-theme)
     (base16-solarized-light           . base16-theme)
@@ -178,6 +191,7 @@
     (sanityinc-tomorrow-day           . color-theme-sanityinc-tomorrow)
     (sanityinc-tomorrow-eighties      . color-theme-sanityinc-tomorrow)
     (sanityinc-tomorrow-night         . color-theme-sanityinc-tomorrow)
+<<<<<<< HEAD
     (doom-Iosvkem                     . doom-themes)
     (doom-challenger-deep             . doom-themes)
     (doom-city-lights                 . doom-themes)
@@ -206,6 +220,21 @@
     (doom-tomorrow-night              . doom-themes)
     (doom-vibrant                     . doom-themes)
     (doom-wilmersdorf                 . doom-themes)
+=======
+    (doom-molokai                     . doom-themes)
+    (doom-mono-dark                   . doom-themes)
+    (doom-mono-light                  . doom-themes)
+    (doom-nova                        . doom-themes)
+    (doom-one                         . doom-themes)
+    (doom-one-light                   . doom-themes)
+    (doom-peacock                     . doom-themes)
+    (doom-spacegrey                   . doom-themes)
+    (doom-tomorrow-day                . doom-themes)
+    (doom-tomorrow-night              . doom-themes)
+    (doom-tron                        . doom-themes)
+    (doom-vibrant                     . doom-themes)
+    (doom-x                           . doom-themes)
+>>>>>>> ec2c5e5c6... Backport up to date lists of themes
     (solarized-light                  . solarized-theme)
     (solarized-light-high-contrast    . solarized-theme)
     (solarized-dark                   . solarized-theme)
@@ -254,6 +283,7 @@
     (gruvbox-light-soft               . gruvbox-theme)
     (gruvbox-light-medium             . gruvbox-theme)
     (gruvbox-light-hard               . gruvbox-theme)
+<<<<<<< HEAD
     (kaolin-dark                      . kaolin-themes)
     (kaolin-light                     . kaolin-themes)
     (kaolin-aurora                    . kaolin-themes)
@@ -269,6 +299,8 @@
     (eziam-light                      . eziam-theme)
     (eziam-dark                       . eziam-theme)
     (eziam-dusk                       . eziam-theme)
+=======
+>>>>>>> ec2c5e5c6... Backport up to date lists of themes
     )
   "alist matching a theme name with its package name, required when
 package name does not match theme name + `-theme' suffix.")

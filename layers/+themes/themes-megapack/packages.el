@@ -43,7 +43,10 @@
     dracula-theme
     espresso-theme
     exotica-theme
+<<<<<<< HEAD
     eziam-theme
+=======
+>>>>>>> ec2c5e5c6... Backport up to date lists of themes
     farmhouse-theme
     flatland-theme
     flatui-theme
