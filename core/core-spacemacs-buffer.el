@@ -19,6 +19,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 (defconst spacemacs-buffer-version-info "0.300"
 =======
 (defconst spacemacs-buffer-version-info "0.200.10"
@@ -26,6 +27,9 @@
 =======
 (defconst spacemacs-buffer-version-info "0.200.11"
 >>>>>>> c25f1c6d9... Bump version to 0.200.11 Hotfix release
+=======
+(defconst spacemacs-buffer-version-info "0.200.13"
+>>>>>>> 582f9aa45... Bump version to 0.200.13
   "Current version used to display addition release information.")
 
 (defconst spacemacs-buffer-name "*spacemacs*"
