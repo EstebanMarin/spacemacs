@@ -1311,11 +1311,20 @@ PREDICATE is an additional expression that eval to a boolean."
    (lambda (x)
      (let ((pkg (configuration-layer/get-package x)))
        (if pkg
+<<<<<<< HEAD
            (and (cfgl-package-distant-p pkg)
                 (or (null usedp)
                     (cfgl-package-used-p pkg))
                 (or (null predicate)
                     (eval predicate)))
+=======
+           (and (not (memq (oref pkg :location) '(built-in site local)))
+                (not (stringp (oref pkg :location)))
+                (or (null usedp)
+                    (and (not (null (oref pkg :owners)))
+                         (not (oref pkg :excluded))
+                         (cfgl-package-enabledp pkg t))))
+>>>>>>> 3b5339d9d... core: fix not found packages with dotspacemacs-install-packages all
          (spacemacs-buffer/warning "Cannot find package for %s" x)
          nil)))))
 
