@@ -26,6 +26,15 @@
         (electric-indent-mode :location built-in)
         (ediff :location built-in)
         (eldoc :location built-in)
+<<<<<<< HEAD:layers/+spacemacs/spacemacs-defaults/packages.el
+=======
+        evil-escape
+        (evil-evilified-state :location local :step pre :protected t)
+        evil-visualstar
+        ;; some packages need to look for binaries,
+        ;; which means the path must be ready by then
+        (exec-path-from-shell :step pre)
+>>>>>>> a26fb15b8... Import help-fns+.el as local package:layers/+distributions/spacemacs-base/packages.el
         (help-fns+ :location local)
         (hi-lock :location built-in)
         (image-mode :location built-in)
