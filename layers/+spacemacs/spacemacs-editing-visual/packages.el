@@ -21,6 +21,10 @@
         ;; waiting for an overlay bug to be fixed
         (hl-anything :excluded t)
         column-enforce-mode
+<<<<<<< HEAD
+=======
+        (hide-comnt :location local)
+>>>>>>> af1be534f... Import hide-comnt.el as local package
         highlight-indentation
         highlight-numbers
         highlight-parentheses
