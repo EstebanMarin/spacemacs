@@ -29,7 +29,10 @@
 </p>
 
 - - -
+<<<<<<< HEAD
 
+=======
+>>>>>>> c7a103a77... Fix line separation in README
 
 **Quick Install:**
 
