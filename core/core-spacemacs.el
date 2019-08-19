@@ -16,7 +16,10 @@
 
 (require 'subr-x nil 'noerror)
 (require 'core-emacs-backports)
+<<<<<<< HEAD
 (require 'core-env)
+=======
+>>>>>>> 351652329... Add missing require for emacs backports
 (require 'page-break-lines)
 (require 'core-hooks)
 (require 'core-debug)
