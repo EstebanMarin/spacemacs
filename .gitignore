@@ -27,6 +27,7 @@
 /recentf
 /session.*
 /srecode-map.el
+<<<<<<< HEAD
 \#*
 ac-comphist.dat
 auto-save-list/
@@ -61,6 +62,11 @@ transient/
 url/*
 var/
 workspace
+=======
+/recentf
+.mc-lists.el
+transient/
+>>>>>>> b1742aa28... Ignore the transient/ directory
 
 # Private directory
 /doc/COMMUNITY.org
