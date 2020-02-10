@@ -40,6 +40,7 @@
 
 **Quick Install:**
 
+<<<<<<< HEAD
 This assumes you don't have an existing Emacs setup and want to run Spacemacs as
 your config. If you do have one, look at
 the [full installation instructions](#install) for other options.
@@ -53,6 +54,9 @@ the [full installation instructions](#install) for other options.
   ```shell
   git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
   ```
+=======
+    git clone https://github.com/EstebanMarin/spacemacs.git ~/.emacs.d
+>>>>>>> e95b0b9aa... Update README.md
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
 **Table of Contents**
