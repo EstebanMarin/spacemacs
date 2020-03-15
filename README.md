@@ -34,9 +34,13 @@
 
 - - -
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> c7a103a77... Fix line separation in README
+=======
+http://ubuntuhandbook.org/index.php/2019/02/install-gnu-emacs-26-1-ubuntu-18-04-16-04-18-10/
+>>>>>>> d1c7cceea... Update README.md
 
 **Quick Install:**
 
