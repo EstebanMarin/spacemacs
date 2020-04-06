@@ -62,6 +62,11 @@ the [full installation instructions](#install) for other options.
     git clone https://github.com/EstebanMarin/spacemacs.git ~/.emacs.d
 >>>>>>> e95b0b9aa... Update README.md
 
+  git remote add upstream https://github.com/syl20bnr/spacemacs.git
+  git fetch upstream
+  git branch --set-upstream-to=upstream/master master
+
+
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
 **Table of Contents**
 
