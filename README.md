@@ -65,6 +65,7 @@ the [full installation instructions](#install) for other options.
   git remote add upstream https://github.com/syl20bnr/spacemacs.git
   git fetch upstream
   git branch --set-upstream-to=upstream/master master
+    git branch --set-upstream-to=upstream/develop develop
 
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
